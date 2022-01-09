@@ -34,7 +34,7 @@ parser.add_argument('--style', dest='style', type=int, default=0)
 parser.add_argument('--bias', dest='bias', type=float, default=1.)
 parser.add_argument('--force', dest='force', action='store_true', default=False)
 parser.add_argument('--info', dest='info', action='store_true', default=False)
-parser.add_argument('--output', dest="output", type=str, default=os.path.join('images', 'sample.png'))
+parser.add_argument('--output', dest="output", type=str, default=os.path.join('images', 'multiLine', 'sample.png'))
 args = parser.parse_args()
 
 
