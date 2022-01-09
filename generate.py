@@ -34,7 +34,7 @@ parser.add_argument('--style', dest='style', type=int, default=0)
 parser.add_argument('--bias', dest='bias', type=float, default=1.)
 parser.add_argument('--force', dest='force', action='store_true', default=False)
 parser.add_argument('--info', dest='info', action='store_true', default=False)
-parser.add_argument("--output", dest='output', default=os.path.join('images','singleLine', "image"))
+parser.add_argument("--output", dest='output', type=str, default=os.path.join('images','singleLine', "image"))
 args = parser.parse_args()
 
 
@@ -222,7 +222,7 @@ def gen(text, w_style, w_bias, info):
             ax[1, 1].set_title('Window')
 
             print("Saving image..")
-            plt.savefig(my_path + '/static/results/sample.png')
+            plt.savefig(args.output)
             #plt.show()
 
         else:
@@ -231,8 +231,8 @@ def gen(text, w_style, w_bias, info):
                 plt.plot(stroke[:, 0], -stroke[:, 1])
             ax.set_title(args_text)
             ax.set_aspect("equal")
-            print("Saving image.. to : ", my_path+'/static/results/sample.png')
-            plt.savefig(my_path + '/static/results/sample.png')
+            print("Saving image.. to : ", args.output)
+            plt.savefig(args.output)
             plt.show()
 
         """
