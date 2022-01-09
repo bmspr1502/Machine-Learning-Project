@@ -1,0 +1,5 @@
+data/original/*
+data/dataset.npy
+data/labels.npy
+
+__pycache__/*
