@@ -221,9 +221,10 @@ def gen(text, w_style, w_bias, info):
             ax[1, 1].grid(False)
             ax[1, 1].set_title('Window')
 
-            print("Saving image..")
+            print("Saving image.. to : ", 'images/singleLine/'+args.output)
+            plt.savefig('images/singleLine/'+args.output)
             plt.savefig(args.output)
-            #plt.show()
+            plt.show()
 
         else:
             fig, ax = plt.subplots(1, 1)
