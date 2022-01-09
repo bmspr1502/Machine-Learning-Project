@@ -34,7 +34,7 @@ parser.add_argument('--style', dest='style', type=int, default=0)
 parser.add_argument('--bias', dest='bias', type=float, default=1.)
 parser.add_argument('--force', dest='force', action='store_true', default=False)
 parser.add_argument('--info', dest='info', action='store_true', default=False)
-parser.add_argument('--output', dest="output", type=str, default=os.path.join('images', 'multiLine', 'sample.png'))
+parser.add_argument('--output', dest="output", type=str, default='testSample.png')
 args = parser.parse_args()
 
 
@@ -201,8 +201,8 @@ def gen(text, w_style, w_bias, info, output):
                 
             
         
-        print("Saving image to: ", os.path.join(my_path, output))
-        plt.savefig(os.path.join(my_path, output))
+        print("Saving image to: ", os.path.join(my_path,'images','multiLine' , output))
+        plt.savefig(os.path.join(my_path,'images','multiLine', output))
         plt.show()
 
         """
@@ -222,8 +222,6 @@ def main():
 
     print(args)
     gen(text, style, bias, info, output)
-    #image = img.imread('static/results/sample.png')
-    #plt.figure(image)
     text.close()
 
 if __name__ == '__main__':
